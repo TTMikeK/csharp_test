@@ -25,6 +25,8 @@ public class HelloWorld
 	{
 		Console.WriteLine("Hello Mono World: "+K32.GetProcessId());
 
+		Example.hello();
+
 		//Example.CppFunc();
 
 		Console.WriteLine("Double: "+Example.Double(13));

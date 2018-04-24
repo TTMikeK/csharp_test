@@ -13,6 +13,9 @@ dll:
 cl_dll:
 	cl.exe /D_USRDLL /D_WINDLL /DBUILDING_EXAMPLE_DLL example_dll.cpp /link /DLL /OUT:example.dll
 
+dump_dll:
+	dumpbin /exports example.dll
+
 exe: dll
 	$(CXX) -o example_exe.exe example_exe.cpp -L. -lexample_dll
 

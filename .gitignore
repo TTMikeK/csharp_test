@@ -1,5 +1,8 @@
 *.exe
 *.a
+*.lib
 *.bak
 *.dll
 *.o
+*.exp
+*.obj

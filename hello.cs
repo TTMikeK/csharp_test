@@ -6,6 +6,8 @@ public class K32 {
 	public static extern int GetProcessId ();
 }
 
+// https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.unmanagedtype?view=netframework-4.7.2
+
 public class Example {
 	[DllImport ("example")]
 	public static extern void hello([MarshalAs(UnmanagedType.LPStr)]String s);

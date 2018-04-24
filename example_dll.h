@@ -11,7 +11,7 @@ extern "C" {
 #define EXAMPLE_DLL __declspec(dllimport)
 #endif
 
-void __stdcall EXAMPLE_DLL hello(const char *s);
+void /*__stdcall*/ EXAMPLE_DLL hello(const char *s);
 
 int EXAMPLE_DLL Double(int x);
 

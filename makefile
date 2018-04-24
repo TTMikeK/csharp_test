@@ -10,6 +10,9 @@ default: dll exe cs
 dll:
 	$(CXX) -shared -o example_dll.dll -DBUILDING_EXAMPLE_DLL example_dll.cpp -Wl,--out-implib,libexample_dll.a
 
+cl_dll:
+	cl.exe /D_USRDLL /D_WINDLL /DBUILDING_EXAMPLE_DLL example_dll.cpp /link /DLL /OUT:example.dll
+
 exe: dll
 	$(CXX) -o example_exe.exe example_exe.cpp -L. -lexample_dll
 

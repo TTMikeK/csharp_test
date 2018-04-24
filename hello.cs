@@ -10,10 +10,11 @@ public class Example {
 	[DllImport ("example_dll")]
 	public static extern void hello([MarshalAs(UnmanagedType.LPStr)]String s);
 
-	[DllImport ("example_dll")]
-	public static extern int Double([MarshalAs(UnmanagedType.I4)]int x);
+	[DllImport ("example")]
+	public static extern int Double(int x);
+//	public static extern int Double([MarshalAs(UnmanagedType.I4)]int x);
 
-	[DllImport ("example_dll.dll")]
+	[DllImport ("example")]
 	public static extern void CppFunc();
 }
 
@@ -24,10 +25,10 @@ public class HelloWorld
 	{
 		Console.WriteLine("Hello Mono World: "+K32.GetProcessId());
 
-		Example.CppFunc();
+		//Example.CppFunc();
 
-		//Console.WriteLine("Double: "+Example.Double(13));
+		Console.WriteLine("Double: "+Example.Double(13));
 
-//		Example.hello("Theodore McMillian");
+		//Example.hello("Theodore McMillian");
 	}
 }

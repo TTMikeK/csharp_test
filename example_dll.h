@@ -15,6 +15,8 @@ void /*__stdcall*/ EXAMPLE_DLL hello(const char *s);
 
 int EXAMPLE_DLL Double(int x);
 
+int EXAMPLE_DLL MikeFunc(int vec2[2]);
+
 #ifdef __cplusplus
 }
 #endif

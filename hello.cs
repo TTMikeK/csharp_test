@@ -17,6 +17,9 @@ public class Example {
 //	public static extern int Double([MarshalAs(UnmanagedType.I4)]int x);
 
 	[DllImport ("example")]
+	public static extern int MikeFunc([MarshalAs(UnmanagedType.LPArray, SizeConst=2)] int[] vec2);
+
+	[DllImport ("example", CallingConvention = CallingConvention.Cdecl)]
 	public static extern void CppFunc();
 }
 
@@ -29,10 +32,13 @@ public class HelloWorld
 
 		Example.hello("Welcome to dinner");
 
-		//Example.CppFunc();
-
 		Console.WriteLine("Double: "+Example.Double(13));
+		
+		Console.WriteLine("Test: "+String.Join(", ", new[]{2, 13}));
 
-		//Example.hello("Theodore McMillian");
+		Console.WriteLine("Mike: "+Example.MikeFunc(new[]{2, 13}));
+
+		// Wont work
+		//Example.CppFunc();
 	}
 }

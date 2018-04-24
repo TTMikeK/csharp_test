@@ -5,6 +5,8 @@ CXX		:=	$(PREFIX)g++
 CS		:=	csc
 
 
+# /SUBSYSTEM:CONSOLE was supposed to write to console (VS2017), but apparently not
+
 default: dll exe cs
 
 dll:

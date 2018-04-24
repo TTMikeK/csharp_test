@@ -7,7 +7,7 @@ public class K32 {
 }
 
 public class Example {
-	[DllImport ("example_dll")]
+	[DllImport ("example")]
 	public static extern void hello([MarshalAs(UnmanagedType.LPStr)]String s);
 
 	[DllImport ("example")]
@@ -25,7 +25,7 @@ public class HelloWorld
 	{
 		Console.WriteLine("Hello Mono World: "+K32.GetProcessId());
 
-		Example.hello();
+		Example.hello("Welcome to dinner");
 
 		//Example.CppFunc();
 
